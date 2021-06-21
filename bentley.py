@@ -7,7 +7,6 @@ Created on Mon Jun 14 14:48:24 2021
 
 import streamlit as st
 import pandas as pd
-import math
 templates = ["plotly", "plotly_white", "plotly_dark", "ggplot2", "seaborn", "simple_white", "none"]
 import plotly.express as px
 
@@ -118,7 +117,7 @@ try:
     df = pd.DataFrame(data)
     
     def roundup(x):
-        return int(math.ceil(x / 40)) * 40
+        return int(round(x / 40)) * 40
     
     Round_total = roundup(Total)
     try:
