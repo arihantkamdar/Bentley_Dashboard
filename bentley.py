@@ -12,7 +12,6 @@ import plotly.express as px
 try:    
     uploaded_file = st.file_uploader("Choose a file")
     if uploaded_file is not None:
-        try:
             data = pd.read_excel(uploaded_file)
         
             #data = pd.read_excel("D:/Streamlit/Audit_QK_Data_Example.xlsx")
@@ -131,7 +130,5 @@ try:
                     st.write("## The QK score is: < 1.0")
                 else:
                     st.write("## The QK score is: > 3.0")
-        except ValueError:
-            st.write("Please choose a file")
 except AssertionError:
     st.write("Error")
